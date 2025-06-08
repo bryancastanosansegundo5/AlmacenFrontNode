@@ -1,0 +1,91 @@
+<!-- Añadir producto -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  .modal-confirmacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido button {
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: red;
+  color: white;
+}
+
+.btn-secondary {
+  background: gray;
+  color: white;
+}
+</style>
+<div class="anadir-producto oculto container mt-4 p-4 border rounded shadow bg-white">
+  <form action="" class="productos-form-anadir">
+    <h2 class="mb-3 text-primary text-center">Añadir un producto</h2>
+    
+    
+    <div class="mb-3">
+      <label for="nombre-producto" class="form-label fw-bold">Nombre de producto</label>
+      <input type="text" name="nombre-producto" id="nombre-producto-anadir" class="form-control"
+        placeholder="Ingrese el nombre del producto" required/>
+    </div>
+
+    <div class="mb-3">
+      <label for="precio-producto" class="form-label fw-bold">Precio del producto</label>
+      <input type="number" name="precio-producto" step="0.01" id="precio-producto-anadir" class="form-control" min="0.01"
+        placeholder="Ingrese el precio del producto" required/>
+    </div>
+
+    <div class="mb-3">
+      <label for="categoria-producto" class="form-label fw-bold">Categoría del producto</label>
+      <select name="categorias-select-anadir" class="form-select categorias-select-anadir" required>
+        <option value="" disabled selected>Seleccione una categoría</option>
+      </select>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-success w-100 anadirProductoPatch">
+        <i class="bi bi-plus-circle"></i> Añadir Producto
+      </button>
+    </div>
+  </form>
+
+  <div class="lista-productos mt-4">
+    <h2 class="mb-3 text-center text-primary">Gestión de los productos</h2>
+    <p class="mensaje-productos"></p>
+    <table class="table table-striped table-hover table-bordered mb-0" id="tabla-productos">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Categoría</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="productos-dinamicos">
+        <!-- Aquí se llenará dinámicamente la tabla -->
+      </tbody>
+    </table>
+  </div>
+</div>

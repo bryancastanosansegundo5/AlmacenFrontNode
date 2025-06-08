@@ -1,0 +1,40 @@
+<!-- Añadir producto -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+<div class="anadir-producto oculto container mt-4 p-4 border rounded shadow bg-white">
+  <!-- <form action="" class="productos-form-anadir"> -->
+    <h2 class="mb-3 text-primary text-center">Buscar un producto</h2>
+    
+    
+    <div class="mb-3">
+      <label for="nombre-producto" class="form-label fw-bold">Nombre de producto</label>
+      <input type="text" name="nombre-producto" id="nombre-producto-buscar" class="form-control"
+        placeholder="Ingrese el nombre del producto" required/>
+    </div>
+
+
+    <!-- <div class="text-center">
+      <button class="btn btn-success w-100 anadirProductoPatch">
+        <i class="bi bi-plus-circle"></i> Añadir Producto
+      </button>
+    </div>
+  </form> -->
+
+  <div class="lista-productos mt-4">
+    <h2 class="mb-3 text-center text-primary">Productos encontrados</h2>
+    <p class="mensaje-productos"></p>
+    <table class="table table-striped table-hover table-bordered mb-0" id="tabla-productos-resultado">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Categoría</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-productos">
+        <!-- Aquí se llenará dinámicamente la tabla -->
+      </tbody>
+    </table>
+  </div>
+</div>

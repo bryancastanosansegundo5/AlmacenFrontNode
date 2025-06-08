@@ -1,4 +1,4 @@
-const SERVER = "https://bryancas.com:4004/almacen";
+const SERVER = "https://bryancas.com/almacen";
 
 // -------------------------FUNCIONES DE CATEGORIAS
 
